@@ -6,7 +6,7 @@
 
 	$koneksi = mysqli_init();
 
-	mysqli_ssl_set($conn,NULL,NULL, "/ssl/BaltimoreCyberTrustRoot.crt.pem", NULL, NULL) ; 
+	mysqli_ssl_set($conn,NULL,NULL, "ssl/BaltimoreCyberTrustRoot.crt.pem", NULL, NULL) ; 
 	mysqli_real_connect($conn, $server, $user, $pass, $db, 3306, MYSQLI_CLIENT_SSL);
 
 	if (mysqli_connect_errno($conn)) {

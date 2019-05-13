@@ -6,10 +6,10 @@
 
 	$koneksi = mysqli_init();
 
-	mysqli_ssl_set($conn,NULL,NULL, "BaltimoreCyberTrustRoot.crt.pem", NULL, NULL) ; 
-	mysqli_real_connect($conn, $server, $user, $pass, $db, 3306, MYSQLI_CLIENT_SSL);
+	mysqli_ssl_set($koneksi,NULL,NULL, "BaltimoreCyberTrustRoot.crt.pem", NULL, NULL) ; 
+	mysqli_real_connect($koneksi, $server, $user, $pass, $db, 3306, MYSQLI_CLIENT_SSL);
 
-	if (mysqli_connect_errno($conn)) {
+	if (mysqli_connect_errno($koneksi)) {
 		die('Failed to connect to MySQL: '.mysqli_connect_error());
 	}
 
